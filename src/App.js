@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import LifeCycleSample from './LifeCycleSample';
 
 function App() {
-  const [randomColor, setRandomColor] = useState('');
-  const [count, setCount] = useState(0);
+  const [color, setColor] = useState('#000000');
   const [visible, setVisible] = useState(true);
 
   const getRandomColor = () => {
@@ -11,13 +11,9 @@ function App() {
 
   return (
     <div>
+      <button onClick={() => setColor(getRandomColor())}>랜덤 색상</button>
       <button onClick={() => setVisible(!visible)}>토글</button>
-      {visible ? <div>
-        <button onClick={() => setRandomColor(getRandomColor())}>랜덤 색상</button>
-        <button onClick={() => setCount(count + 1)}>더하기</button>
-        <h1 style={{ color: randomColor }}>{count}</h1>
-        <p>color : {randomColor}</p>
-      </div> : null}
+      {visible && <LifeCycleSample color={color} />}
     </div>
   );
 }
