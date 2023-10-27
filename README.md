@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+# React LifeCycle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[참고자료 : 벨로퍼트와 함께하는 모던 리액트 - 25. LifeCycle Method](https://react.vlpt.us/basic/25-lifecycle.html)
 
-## Available Scripts
+## 프로젝트 실행 방법
+```shell
+$ npm install && npm start
+```
 
-In the project directory, you can run:
+## 프로젝트의 3가지 버튼
+  1. 랜덤 색상 : 숫자의 색상이 랜덤하게 바뀝니다.
+  2. 토글 : 컴포넌트가 사라지거나 나타납니다.
+  3. 더하기 : 숫자가 1씩 더해집니다.
 
-### `npm start`
+❗️ 컴포넌트 : 프로그래밍에 있어 재사용이 가능한 각각의 독립된 모듈
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="https://github.com/Largopie/react-lifecycle/assets/106071687/475dfd6a-21e1-43f5-9a58-b4a6b42b3e17" width="800" height="400">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[출처 : http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/]
 
-### `npm test`
+- 컴포넌트는 생성(mounting) -> 업데이트(updating) -> 제거(unmounting)의 생명주기를 갖습니다.
+- 리액트 클래스 컴포넌트는 라이프 사이클 메서드를 사용하며, 함수형 컴포넌트는 Hook을 사용합니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 마운트
+    마운트 할 때 발생되는 생명주기
+- constructor
+- getDerivedStateFromProps
+- render
+- componentDidMount
