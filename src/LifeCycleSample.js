@@ -27,6 +27,8 @@ class LifeCycleSample extends Component {
 
   shouldComponentUpdate(nextProps, nextState) {
     console.log('shouldComponentUpdate', nextProps, nextState);
+
+    return true;
   }
 
   componentWillUnmount() {
